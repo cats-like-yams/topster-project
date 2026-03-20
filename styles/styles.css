@@ -1,0 +1,93 @@
+/*Karen Bojorquez Gil*/
+/*colors:
+- lightest blue: d9f0ff
+- middle blue: a3d5ff
+- darkest blue: 83c9f4
+*/
+
+html {
+    background-color: #D9f0ff;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #83c9f4;
+    margin: 0;
+    padding: 2px;
+}
+
+header h1 {
+    font-size: 200%;
+    text-align: center;
+}
+
+nav {
+    background-color: #a3d5ff;
+    text-decoration: none;
+}
+
+nav ul {
+    padding: 10px 0;
+    margin: 0;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+nav ul li {
+    flex-basis: 240px;
+    position: relative;
+}
+
+nav ul li a {
+    color: black;
+    font-size: large;
+    padding: 5px 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav ul li:hover > ul, nav ul li:focus-within > ul {
+    display: block;
+    position: absolute;
+    width: 240px;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    text-decoration: underline;
+    font-size: 120%;
+}
+
+main {
+    grid-template-columns: auto auto auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img {
+    width: 15%;
+    height: auto;
+}
+
+img:hover, img:focus {
+    transform: scale(1.1);
+}
+
+footer {
+    margin: 20px;
+    text-align: center;
+}
+
+footer a:hover, footer a:focus {
+    text-decoration: underline;
+    font-size: 102%;
+}
