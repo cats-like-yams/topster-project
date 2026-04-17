@@ -67,19 +67,23 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 main {
-    grid-template-columns: auto auto auto auto auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 across */
+    gap: 10px; /* spacing between images */
+    padding: 20px;
+    max-width: 800px; /* keeps it from stretching too wide */
+    margin: 0 auto; /* center it */
 }
 
 img {
-    width: 15%;
-    height: auto;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* keeps them square like a real topster */
+    object-fit: cover;
+    transition: transform 0.2s ease; /* smooth zoom effect */
 }
 
 img:hover, img:focus {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 footer {
