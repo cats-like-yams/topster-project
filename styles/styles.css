@@ -15,6 +15,23 @@ body {
     padding: 0;
 }
 
+.story {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.story h1, .story h2 {
+    text-align: center;
+}
+
+.story ul {
+    margin: 0 auto;
+    width: fit-content;
+    text-align: left;
+    list-style-position: outside;
+}
+
 header {
     background-color: #83c9f4;
     margin: 0;
@@ -72,13 +89,51 @@ nav ul li a:hover, nav ul li a:focus {
     font-size: 120%;
 }
 
+.page-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 20px;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-layout main {
+    max-width: none;
+    margin: 0;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+}
+
+aside h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+aside p {
+    margin: 0;
+    text-align: center;
+    color: #333;
+}
+
+aside iframe {
+    width: 100%;
+    min-height: 650px;
+    border-radius: 12px;
+    border: none;
+}
+
 main {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 across */
     gap: 10px; /* spacing between images */
-    padding: 20px;
-    max-width: 800px; /* keeps it from stretching too wide */
-    margin: 0 auto; /* center it */
+    padding: 0;
 }
 
 img {
@@ -100,6 +155,16 @@ footer {
 footer a:hover, footer a:focus {
     text-decoration: underline;
     font-size: 102%;
+}
+
+@media (max-width: 980px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    aside iframe {
+        min-height: 500px;
+    }
 }
 
 @media (max-width: 768px) {
